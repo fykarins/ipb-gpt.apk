@@ -1,0 +1,7 @@
+<resources>
+    <declare-styleable name="AppAttrs">
+        <attr name="appPadding" format="dimension" />
+        <attr name="appInnerRadius" format="dimension" />
+        <attr name="appRadius" format="dimension" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,41 @@
+<resources>
+    <!-- App Name -->
+    <string name="app_name">RepoSights</string>
+
+    <!-- Navigation Drawer -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">RepoSights: Repository Insight Searcher</string>
+    <string name="nav_header_subtitle">C242-PS517</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <!-- Action Settings -->
+    <string name="action_settings">Settings</string>
+
+    <!-- Menu Items -->
+    <string name="menu_home">Home</string>
+    <string name="menu_history">History</string>
+    <string name="menu_bookmark">Bookmark</string>
+
+    <!-- Messages and Inputs -->
+    <string name="message">Type message here</string>
+    <string name="send_icon">Send Icon</string>
+
+    <!-- Features -->
+    <string name="analyze_pdf">Analyze PDF</string>
+    <string name="summarize_text">Summarize text</string>
+    <string name="analyze_images">Analyze images</string>
+
+    <!-- Others -->
+    <string name="code">Code</string>
+    <string name="footer_text">
+        IPB Research Assistant: A Smart Chatbot to Help You Find Relevant Research for Your Undergraduate Thesis.
+        Chat About Research at IPB Anytime! </string>
+    <string name="todo"></string>
+    <string name="open_drawer">Open Drawer</string>
+    <string name="text_home">How can I assist you?\n</string>
+    <string name="text_history">This is Your History</string>
+    <string name="text_bookmark">This is Your Bookmark</string>
+    <string name="menu_footer" />
+    <string name="logout">Successfully logged out</string>
+</resources>
