@@ -1,14 +1,18 @@
 package com.example.reposights.ui.home
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.example.reposights.data.Repository
+import kotlinx.coroutines.launch
 
 class HomeViewModel : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "How can I assist you?"
-    }
+    private val repository = Repository()
 
-    val text: LiveData<String> get() = _text
+    fun sendMessage(documentId: String, message: String) {
+        viewModelScope.launch {
+            // Panggil repository untuk mengirim pesan
+            repository.sendMessageToDocument(documentId, message)
+        }
+    }
 }

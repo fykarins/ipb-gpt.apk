@@ -12,10 +12,10 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_history"
-        android:name="com.example.reposights.ui.history.HistoryFragment"
-        android:label="@string/menu_history"
-        tools:layout="@layout/fragment_history" />
+        android:id="@+id/nav_find_document"
+        android:name="com.example.reposights.ui.document.FindDocumentFragment"
+        android:label="@string/menu_find_document"
+        tools:layout="@layout/fragment_find_document" />
 
     <fragment
         android:id="@+id/nav_bookmark"

@@ -7,6 +7,8 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.MenuProvider
@@ -20,19 +22,15 @@ class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
+    private lateinit var homeViewModel: HomeViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val homeViewModel = ViewModelProvider(this)[HomeViewModel::class.java]
-
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-
-        homeViewModel.text.observe(viewLifecycleOwner) { text ->
-            binding.textHome.text = text
-        }
+        homeViewModel = ViewModelProvider(this)[HomeViewModel::class.java]
 
         return binding.root
     }
@@ -41,6 +39,18 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         (requireActivity() as AppCompatActivity).setSupportActionBar(binding.toolbar)
+
+        binding.messageInputLayout.findViewById<ImageView>(R.id.message_input_icon).setOnClickListener {
+            val message =
+                binding.messageInputLayout.findViewById<EditText>(R.id.message_input_text).text.toString()
+            if (message.isNotEmpty()) {
+                val selectedDocumentId = "documentId" // Ganti dengan ID dokumen yang sesuai
+                homeViewModel.sendMessage(selectedDocumentId, message)
+                Toast.makeText(requireContext(), "Message delivered", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(requireContext(), "Please fill the message", Toast.LENGTH_SHORT).show()
+            }
+        }
 
         requireActivity().addMenuProvider(object : MenuProvider {
             override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {

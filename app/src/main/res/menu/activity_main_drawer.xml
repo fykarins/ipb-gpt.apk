@@ -10,9 +10,9 @@
             android:title="@string/menu_home"
             android:textColorHint="#ADD8E6"/>
         <item
-            android:id="@+id/nav_history"
-            android:icon="@drawable/ic_menu_history"
-            android:title="@string/menu_history"
+            android:id="@+id/nav_find_document"
+            android:icon="@drawable/ic_menu_find_document"
+            android:title="@string/menu_find_document"
             android:textColorHint="#ADD8E6"/>
         <item
             android:id="@+id/nav_bookmark"

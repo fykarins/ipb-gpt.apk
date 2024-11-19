@@ -1,6 +1,8 @@
-package com.example.reposights.ui.history
+package com.example.reposights.ui.document
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuInflater
@@ -13,11 +15,11 @@ import androidx.core.view.MenuProvider
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import com.example.reposights.R
-import com.example.reposights.databinding.FragmentHistoryBinding
+import com.example.reposights.databinding.FragmentFindDocumentBinding
 
-class HistoryFragment : Fragment() {
+class FindDocumentFragment : Fragment() {
 
-    private var _binding: FragmentHistoryBinding? = null
+    private var _binding: FragmentFindDocumentBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -25,7 +27,7 @@ class HistoryFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentHistoryBinding.inflate(inflater, container, false)
+        _binding = FragmentFindDocumentBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -33,6 +35,19 @@ class HistoryFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         (requireActivity() as AppCompatActivity).setSupportActionBar(binding.toolbar)
+
+        binding.searchInput.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                val query = s.toString()
+                if (query.isNotEmpty()) {
+                    // Implementasikan ViewModel dan logika pencarian di sini
+                    Toast.makeText(requireContext(), "Searching: $query", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            override fun afterTextChanged(s: Editable?) {}
+        })
 
         requireActivity().addMenuProvider(object : MenuProvider {
             override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
