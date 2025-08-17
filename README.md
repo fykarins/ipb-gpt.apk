@@ -29,14 +29,17 @@ This tool aims to close a critical gap in academic research by improving search 
 
 ## 🖼️ Application Screenshots
 
-| Home Page | Search Result | Paper Details |
+| Login Page | Register Page | Home Page |
 |-----------|---------------|---------------|
-| ![Home](assets/app_home.png) | ![Result](assets/app_result.png) | ![Details](assets/app_details.png) |
+| ![Login](assets/app_home_page.png) | ![Register](assets/app_register_page.png) | ![Home](assets/app_home_page.png) |
 
-| Login Page | Register Page | Settings |
+| Side Bar | Search Results | Select Repo |
 |------------|---------------|----------|
-| ![Login](assets/app_login.png) | ![Register](assets/app_register.png) | ![Settings](assets/app_settings.png) |
+| ![Sidebar](assets/app_sidebar_page.png) | ![Search](assets/app_search_page.png) | ![Select](assets/app_select_page.png) |
 
+| Chat Results | History Page |
+|------------|---------------|
+| ![Chat](assets/app_chat_page.png) | ![History](assets/app_history_page.png) |
 ---
 
 ## 🛠️ Tech Stack
