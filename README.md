@@ -31,15 +31,15 @@ This tool aims to close a critical gap in academic research by improving search 
 
 | Login Page | Register Page | Home Page |
 |-----------|---------------|---------------|
-| ![Login](assets/app_home_page.png) | ![Register](assets/app_register_page.png) | ![Home](assets/app_home_page.png) |
+| ![Login](assets/app_home_page.jpg) | ![Register](assets/app_register_page.jpg) | ![Home](assets/app_home_page.jpg) |
 
 | Side Bar | Search Results | Select Repo |
 |------------|---------------|----------|
-| ![Sidebar](assets/app_sidebar_page.png) | ![Search](assets/app_search_page.png) | ![Select](assets/app_select_page.png) |
+| ![Sidebar](assets/app_sidebar_page.jpg) | ![Search](assets/app_search_page.jpg) | ![Select](assets/app_select_page.jpg) |
 
 | Chat Results | History Page |
 |------------|---------------|
-| ![Chat](assets/app_chat_page.png) | ![History](assets/app_history_page.png) |
+| ![Chat](assets/app_chat_page.jpg) | ![History](assets/app_history_page.jpg) |
 ---
 
 ## 🛠️ Tech Stack
